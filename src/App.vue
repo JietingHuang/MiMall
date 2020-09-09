@@ -30,3 +30,27 @@
   color: #42b983;
 }
 </style>
+
+<script>
+// import axios from 'axios'
+import jsonp from 'jsonp'
+export default {
+  data(){
+    return{
+      age: 24,
+      data: ''
+    }
+  },
+  mounted(){
+    let url = "/api/kg/getgraph";
+    // axios.get(url).then(() => {
+
+    // })
+
+    jsonp(url, (err, res)=>{
+      let result = res;
+      this.data = result;
+    })
+  }
+}
+</script>
