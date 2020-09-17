@@ -36,9 +36,7 @@ export default {
   },
   data(){
     return{
-      res: {
-        
-      }
+      res: {}
     }
   },
   mounted(){
@@ -49,10 +47,11 @@ export default {
     // storage.clear(("a","user"));
 
     // json请求方式一
-    // this.axios.get('/mock/user/login.json')
-    // .then((res) =>{
-    //   this.res = res;
-    // });
+    // 本地加载请求静态json文件的形式
+    this.axios.get('/mock/user/login.json')
+    .then((res) =>{
+      this.res = res;
+    });
   }
 }
 </script>
