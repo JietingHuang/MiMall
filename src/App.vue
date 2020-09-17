@@ -53,8 +53,15 @@ export default {
     //   this.res = res;
     // });
 
-    // json请求方式二 
+    // json请求方式二
     // 通过easy-mock平台实现数据mock
+    // this.axios.get('/user/login')
+    // .then((res) =>{
+    //   this.res = res;
+    // });
+
+    // json请求方式三
+    // 本地集成mockjs实现数据mock
     this.axios.get('/user/login')
     .then((res) =>{
       this.res = res;
