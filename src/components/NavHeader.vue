@@ -140,12 +140,14 @@ export default {
             this.axios.get('/products',{
                 params:{
                     categoryId: '100012',
-                    // pageSize: 6
+                    pageSize: 6
                 }
             }).then((res)=>{
-                if(res.list.length>=6){
-                    this.phoneList = res.list.slice(0, 6);
-                }
+                this.phoneList = res.list;
+                // 方法二
+                // if(res.list.length>=6){
+                //     this.phoneList = res.list.slice(0, 6);
+                // }
             })
         },
         goToCart(){
@@ -245,6 +247,7 @@ export default {
                             border-top: 1px solid #E5E5E5;
                             box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.11);
                             transition: all .5s;
+                            background-color: #fff;
                             .product{
                                 position: relative;
                                 float: left;
